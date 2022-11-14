@@ -1,14 +1,18 @@
+
+// A compone
 import { createSignal, createEffect } from 'solid-js'
 
 /*
 Notes:
 1. In solid components only run once
+2. Reactivity has nothing to do with the component, components are just function 
 
 */
 
-export default function Counter(){
-	const [count, setCount] = createSignal(0);
+const [count, setCount] = createSignal(0);
 
+export default function Counter(){
+	
 	// Add function
 	function add() {
 		setCount(count() + 1);
